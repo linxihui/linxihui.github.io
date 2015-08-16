@@ -1,7 +1,7 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+title: Eric Xihui Lin
+description: 
 
-url: http://brianmaierjr.github.com/long-haul
+url: http://linxihui.github.io
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
@@ -19,9 +19,7 @@ navigation:
    url: /contact
 
 social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
-
-google_analytics: "UA-58263416-1"
+   github: linxihui
+   facebook: linxihui
+   linkedin: linxihui
+   email: xihuil.silence@gmail.com
