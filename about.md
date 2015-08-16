@@ -7,8 +7,8 @@ title: About Me
 	<h1 class="pageTitle">About Eric</h1>
 	<p class="intro">
 		I am a Bioinformatician in Ontario Institute for Cancer Reesarch. I have 
-		a ackground in applied mathematics, statistics and love coding. Data analysis and machine learning
-		are what I current devote to. 
+		background in applied mathematics, statistics and love coding! Data analysis and machine learning
+		are what I current devote to.
 	</p>
 	<h2>My projects on Github</h2>
 	<ul>
