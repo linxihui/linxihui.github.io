@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "'[', '[[' and '$'"
+title:  "[, [[ and $"
 date:   2015-09-02
 
 ---
