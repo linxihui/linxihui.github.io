@@ -2,7 +2,6 @@
 layout: post
 title:  "[, [[ and $"
 date:   2015-09-02
-
 ---
 
 Perhaps `[`, `[[` and `$` are the most frequently used functions/operators in R for everyone. But how much do you know about them?
@@ -101,7 +100,8 @@ $BB
     a   
 3 4 5 6 
 
-> sapply(ly, `[`, 1) # In the outcome, the name of first element is 'AA.a' as `[` retains names
+# The name of 1st element is 'AA.a' as `[` retains names
+> sapply(ly, `[`, 1)
 AA.a   BB 
    1    3 
 > sapply(ly, `[[`,1)
@@ -119,16 +119,17 @@ AA BB
 ### Define `[`, `[[` or `$` for your own object
 
 ```r
-> lz <- structure(list(AA = c('a' = 1, 'b' = 2), BB = c(3, 4, 'a' = 5, 6)), class = 'myclass')
+> lz <- structure(list(
+        AA = c('a' = 1, 'b' = 2), 
+        BB = c(3, 4, 'a' = 5, 6)), 
+    class = 'myclass')
 > lz[1] # use `[` method for list
 $AA
 a b 
 1 2 
 
-# redefine `[` to return the i-th entry of each element of a list
-
+# re-define `[` to return the i-th entry of each element of a list
 > `[.myclass` <- function(x, i) sapply(x, `[[`, i)
-
 > lz[1]
 AA BB 
  1  3 
