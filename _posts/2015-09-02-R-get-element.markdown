@@ -58,10 +58,11 @@ Error in x[[c("A", "T")]] : attempt to select more than one element
 ```r
 > lx[['A']]  # lx has elements of AA, BB, but not A.
 NULL
-> lx[['A', exact = FALSE]]                                                                                                                                                   
+> lx[['A', exact = FALSE]]
 [1] 1 2 3 4
-> lx$A  # use `` to wrap over the name if it contains an invalid name character(e.g., space), e.g., lx$`var name`
+> lx$A
 [1] 1 2 3 4
+# use `` to wrap over the name if it contains an invalid name character(e.g., space)
 ```
 
 So obviously, you will choose `$` over `[[` when you want partial match or simpler syntax.  But you may want to use `[[` over `$` if you want exact match, or if `i` is an expression or variable.
