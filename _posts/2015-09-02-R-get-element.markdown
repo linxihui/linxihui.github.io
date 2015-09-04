@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "`[`, `[[`, and `$`"
+title:  "'[', '[[' and '$'"
 date:   2015-09-02
 
 ---
 
 Perhaps `[`, `[[` and `$` are the most frequently used functions/operators in R for everyone. But how much do you know about them?
 
-# Behaviors for vector, matrix and data.frame
+### Behaviors for vector, matrix and data.frame
 
-## for vector
+#### for vector
 I mean, atomic vector like `c(5, 1, 10)` or recursive vector like list.
 
 ```r
@@ -46,7 +46,7 @@ $AA
 2. `[` takes a vector of indices, while `[[` cannot  (of course as from the above property)
 
 ```r
-> x[c('A', 'T')]                                                                       
+> x[c('A', 'T')]
   A   T 
 "T" "A" 
 > x[[c('A', 'T')]]
@@ -68,7 +68,7 @@ NULL
 So obviously, you will choose `$` over `[[` when you want partial match or simpler syntax.  But you may want to use `[[` over `$` if you want exact match, or if `i` is an expression or variable.
 
 
-## for matrix
+#### for matrix
 
 First,  matrix is an atomic object, but is not of a vector type.
 
@@ -78,7 +78,7 @@ First,  matrix is an atomic object, but is not of a vector type.
 4. `matrix[1:3, 1]` or `matrix[1, 1:3]` returns a vector, NOT matrix.  To request a matrix, use `matrix[1:3, 1, drop = FALSE]`, etc.
 
 
-## for data.frame
+#### for data.frame
 
 Data frame is an interest object, which is kind of a mix of matrix and list.  Indeed,
 
@@ -87,7 +87,7 @@ Data frame is an interest object, which is kind of a mix of matrix and list.  In
 2. `data.frame[i, j]` behaves identical to `matrix[i,j]`, except when `i` is vector of integer of length 1, while `j` is vector of length > 1, e.g, `i = 2` where `matrix[2, 1:3]` returns a vector but `data.frame[2, 1:3]` gives a data.frame. (Think about why this is reasonable? Hint,  data.frame is a list)
 
 
-# Use `[`, `[[` or `$` as function to apply-functions
+### Use `[`, `[[` or `$` as function to apply-functions
 
 Example, get the first entry or first 2 entries of each element in a list.  Use them, surround them by back-ticks `. Again, bear in mind the difference between these operators. 
 
@@ -116,7 +116,7 @@ AA BB
  1  5 
 ```
 
-# Define `[`, `[[` or `$` for your own object
+### Define `[`, `[[` or `$` for your own object
 
 ```r
 > lz <- structure(list(AA = c('a' = 1, 'b' = 2), BB = c(3, 4, 'a' = 5, 6)), class = 'myclass')
